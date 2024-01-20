@@ -1,0 +1,32 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar una película por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las películas por género
+GET http://localhost:3000/movies?genre=drama
+
+### Crear una película con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Avatar",
+  "year": 2009,
+  "director": "James Cameron",
+  "duration": 162,
+  "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+  "genre": ["Action", "Adventure", "Fantasy"],
+  "rate": 7.8
+}
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "id": "dcdd0fad-a94c-4810-8acc-5f108d3b18c3",
+  "title": "The Shawshank Redemption",
+  "year": 1998
+}
